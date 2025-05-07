@@ -10,6 +10,7 @@ import ImageViewer from "./components/ImageViewer.vue"
 import GoBack from "./components/GoBack.vue";
 
 export default {
+	cleanUrls: true,
 	...Theme,
 	Layout: () => {
 		return h(Theme.Layout, null, {
