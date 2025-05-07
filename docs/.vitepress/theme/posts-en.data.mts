@@ -10,6 +10,7 @@ interface Post {
     monthDay: string
   }
   tags: string[]
+  category: string
   excerpt: string | undefined
 }
 
@@ -24,7 +25,8 @@ export default createContentLoader('en/posts/**/*.md', {
         url,
         excerpt,
         date: formatDate(frontmatter.date),
-        tags: frontmatter.tags
+        tags: frontmatter.tags || [],
+        category: frontmatter.category || 'Uncategorized'  // 添加 category 字段
       }))
       .sort((a, b) => b.date.time - a.date.time)
   }

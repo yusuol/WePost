@@ -1,13 +1,7 @@
 ---
 title: GPT4o生图风格小全
 date: 2025-04-11
-tags:
-  - GPT-4o
-  - Image Generation
-  - Guide
-  - AI
-  - Prompt
-  - Style
+category: GPT-4o
 ---
 # GPT4o生图风格小全
 

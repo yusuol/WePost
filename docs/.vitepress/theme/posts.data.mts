@@ -10,6 +10,7 @@ interface Post {
     monthDay: string
   }
   tags: string[]
+  category: string
   excerpt: string | undefined
 }
 
@@ -24,7 +25,8 @@ export default createContentLoader('posts/**/*.md', {
         url,
         excerpt,
         date: formatDate(frontmatter.date),
-        tags: frontmatter.tags
+        tags: frontmatter.tags || [],
+        category: frontmatter.category || '未分类'  // 添加 category 字段
       }))
       .sort((a, b) => b.date.time - a.date.time)
   }
@@ -39,15 +41,15 @@ function formatDate(raw: string): Post['date'] {
   date.setUTCHours(12)
   return {
     time: +date,
-    string: date.toLocaleDateString('zh-Hans', {
+    string: date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit'
     }),
-    year: date.toLocaleDateString('zh-Hans', {
+    year: date.toLocaleDateString('en-US', {
       year: 'numeric'
     }),
-    monthDay: date.toLocaleDateString('zh-Hans', {
+    monthDay: date.toLocaleDateString('en-US', {
       month: '2-digit',
       day: '2-digit'
     })

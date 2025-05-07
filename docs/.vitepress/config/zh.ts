@@ -16,9 +16,7 @@ export default defineConfig({
     nav: [
 			{ text: "博客", link: "/" },
 			{ text: "归档", link: "/archive", activeMatch: '/archive' },
-			// { text: "笔记", link: firstNoteItemLink, activeMatch: '/notes/' },
-			{ text: "关于", link: "/about", activeMatch: '/about' },
-			{ text: "赞助", link: "/support-me", activeMatch: '/support-me' },
+			{ text: "分类", link: "/category", activeMatch: '/category/' },
     ],
     footer: {
       message: 'Copyright © 2022-present <a href="https://justin3go.com/about">Justin3go</a>.' +
