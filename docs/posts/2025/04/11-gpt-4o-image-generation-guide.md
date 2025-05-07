@@ -2,6 +2,7 @@
 title: GPT4o生图风格小全
 date: 2025-04-11
 category: GPT-4o
+language: "zh-Hans"
 ---
 # GPT4o生图风格小全
 
