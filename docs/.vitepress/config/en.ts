@@ -3,7 +3,6 @@ import { defineConfig} from 'vitepress'
 import { createSideBarEN } from "../theme/utils/createSideBar";
 
 const sideBarConfig = createSideBarEN();
-const firstNoteItemLink = sideBarConfig['/en/notes/'][0].items[0].link
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
