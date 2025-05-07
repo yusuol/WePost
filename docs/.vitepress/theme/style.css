@@ -28,15 +28,15 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-	--vp-c-blue-1: #41b349;
-	--vp-c-blue-2: #41b349;
-	--vp-c-blue-3: #41b349;
-	--vp-c-blue-soft: rgba(110, 156, 190, 0.14);
+	--vp-c-green-1: #41b349;
+	--vp-c-green-2: #41b349;
+	--vp-c-green-3: #41b349;
+	--vp-c-green-soft: rgba(110, 156, 190, 0.14);
 
-	--vp-c-yellow-1: #41b349;
-	--vp-c-yellow-2: #41b349;
-	--vp-c-yellow-3: #41b349;
-	--vp-c-yellow-soft: rgba(186, 186, 186, 0.14);
+	--vp-c-green-dark-1: #41b349;
+	--vp-c-green-dark-2: #41b349;
+	--vp-c-green-dark-3: #41b349;
+	--vp-c-green-dark-soft: rgba(186, 186, 186, 0.14);
 }
 
 /**
@@ -44,17 +44,17 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-	--vp-c-brand-1: var(--vp-c-blue-1);
-	--vp-c-brand-2: var(--vp-c-blue-2);
-	--vp-c-brand-3: var(--vp-c-blue-3);
-	--vp-c-brand-soft: var(--vp-c-blue-soft);
+	--vp-c-brand-1: var(--vp-c-green-1);
+	--vp-c-brand-2: var(--vp-c-green-2);
+	--vp-c-brand-3: var(--vp-c-green-3);
+	--vp-c-brand-soft: var(--vp-c-green-soft);
 }
 
 .dark {
-	--vp-c-brand-1: var(--vp-c-yellow-1);
-	--vp-c-brand-2: var(--vp-c-yellow-2);
-	--vp-c-brand-3: var(--vp-c-yellow-3);
-	--vp-c-brand-soft: var(--vp-c-yellow-soft);
+	--vp-c-brand-1: var(--vp-c-green-dark-1);
+	--vp-c-brand-2: var(--vp-c-green-dark-2);
+	--vp-c-brand-3: var(--vp-c-green-dark-3);
+	--vp-c-brand-soft: var(--vp-c-green-dark-soft);
 }
 
 /**
@@ -138,7 +138,7 @@
 }
 
 .VPDoc img {
-	border-radius: 4px;
+	border-radius: 8px;
 	cursor: zoom-in;
 }
 
