@@ -18,7 +18,7 @@ isNoBackBtn: true
   <div class="post-container" v-for="post in postGroup" :key="post.url">
     <a :href="post.url">{{ post.title }}</a>
     <span class="post-date">
-      {{ post.date.monthDay }}
+      {{ post.date.string }}
     </span>
   </div>
 </template>
@@ -27,66 +27,35 @@ isNoBackBtn: true
 import { computed } from "vue";
 import { data as posts } from "../.vitepress/theme/posts-en.data.mts";
 
-// 格式化时间为 MM/DD/YYYY 格式
-function formatDate(raw: string) {
-  const date = new Date(raw);
-  date.setUTCHours(12);
-  return {
-    time: +date,
-    string: date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-    }),
-    year: date.toLocaleDateString('en-US', {
-      year: 'numeric',
-    }),
-    monthDay: date.toLocaleDateString('en-US', {
-      month: '2-digit',
-      day: '2-digit',
-    })
-  };
-}
-
-// 按时间倒序排序并生成分类
+// 按分类分组并排序
 const sortedCategoryGroups = computed(() => {
-  const groups = new Map<string, typeof posts>();
+  const map = new Map<string, typeof posts>();
 
   posts.forEach((post) => {
     const category = post.category || "Uncategorized";
-    const formattedDate = formatDate(post.date);
-    post.date = formattedDate;
-
-    if (!groups.has(category)) {
-      groups.set(category, []);
+    if (!map.has(category)) {
+      map.set(category, []);
     }
-    groups.get(category)?.push(post);
+    map.get(category)?.push(post);
   });
 
-  // 对每个分类内的文章按时间倒序排列
-  const sortedEntries = Array.from(groups.entries()).map(([category, group]) => {
-    group.sort((a, b) => b.date.time - a.date.time); // 按时间排序
+  // 对每个分类内部按时间倒序排序
+  const sortedEntries = Array.from(map.entries()).map(([category, group]) => {
+    group.sort((a, b) => b.date.time - a.date.time);
     return [category, group];
   });
 
-  // 按每个分类的最新文章排序
+  // 再根据每个分类中最新文章时间，整体排序
   sortedEntries.sort((a, b) => b[1][0].date.time - a[1][0].date.time);
 
-  return Object.fromEntries(sortedEntries);
+  return sortedEntries;
 });
 </script>
 
 <style lang="scss" scoped>
-.mr-2 {
-  margin-right: 2px;
-}
-
 .post-title {
   margin-bottom: 6px;
-  border-top: 0px;
   position: relative;
-  top: 0;
-  left: 0;
 
   .post-year {
     position: absolute;
