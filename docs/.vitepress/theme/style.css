@@ -168,3 +168,22 @@ main > div > div > pre > code {
 	/* scrollbar-color: rgba(0, 0, 0, 0.12) transparent; */
 	scrollbar-width: thin;
 }
+
+@media (min-width: 960px) {
+  .VPContent.has-sidebar {
+    max-width: 100%;
+  }
+  
+  .VPContent .container {
+    max-width: 61.8% !important;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 959px) {
+  .VPContent .container {
+    max-width: calc(100% - 16px) !important;
+    margin: 0 8px;
+  }
+}
