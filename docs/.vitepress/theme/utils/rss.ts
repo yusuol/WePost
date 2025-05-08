@@ -8,7 +8,7 @@ const hostname = "https://yusuol.com";
 export async function createRssFileZH(config: SiteConfig) {
   const feed = new Feed({
     title: 'Yusuol',
-    description: '坚持深耕技术领域的 T 型前端程序员, 关注独立开发，喜欢 Vuejs、Nestjs, 还会点 Python、搜索引擎、NLP、Web3、后端',
+    description: '科技让生活更美好？',
     id: hostname,
     link: hostname,
     language: "zh-Hans",
