@@ -1,13 +1,7 @@
 ---
 title: GPT-4o Image Generation Guide
 date: 2025-04-11
-tags:
-  - GPT-4o
-  - Image Generation
-  - Guide
-  - AI
-  - Prompt
-  - Style
+category: GPT-4o
 ---
 # GPT-4o Image Generation Guide
 
@@ -17,7 +11,7 @@ tags:
 
 > ✨Article Summary (AI Generated)
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 The author has compiled a comprehensive guide to GPT-4o image generation styles, covering a variety of unique artistic styles and application scenarios. It mainly includes:
 
@@ -29,7 +23,7 @@ These styles can be applied to various practical scenarios such as *brand design
 
 > This article provides readers with a systematic reference guide for GPT-4o image generation, serving both as an introductory tutorial and for advanced learning.
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 ## Styles
 

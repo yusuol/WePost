@@ -1,9 +1,5 @@
 import { type DefaultTheme, defineConfig } from 'vitepress'
 
-import { createSideBarZH } from "../theme/utils/createSideBar";
-
-const sideBarConfig = createSideBarZH();
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Yusuol",
@@ -27,7 +23,6 @@ export default defineConfig({
     outlineTitle: "当前页面",
     lastUpdatedText: "最近更新时间",
 
-    sidebar: sideBarConfig,
 
     socialLinks: [
       {
@@ -37,11 +32,6 @@ export default defineConfig({
         link: "/feed.xml",
       },
     ],
-
-    editLink: {
-      pattern: "https://github.com/Justin3go/justin3go.com/edit/master/docs/:path",
-      text: "在 GitHub 上编辑此页",
-    },
     returnToTopLabel: "回到顶部",
     sidebarMenuLabel: "目录",
     darkModeSwitchLabel: "深色模式",

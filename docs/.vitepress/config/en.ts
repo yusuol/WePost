@@ -1,9 +1,5 @@
 import { defineConfig} from 'vitepress'
 
-import { createSideBarEN } from "../theme/utils/createSideBar";
-
-const sideBarConfig = createSideBarEN();
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Yusuol",
@@ -21,8 +17,6 @@ export default defineConfig({
       message: '<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a> © 2025 <a href="https://yusuol.com">Yusuol</a>',
     },
 
-    sidebar: sideBarConfig,
-
     socialLinks: [
       {
         icon: {
@@ -31,9 +25,5 @@ export default defineConfig({
         link: "/feed-en.xml",
       },
     ],
-
-    editLink: {
-      pattern: "https://github.com/Justin3go/justin3go.com/edit/master/docs/:path"
-    },
   },
 })

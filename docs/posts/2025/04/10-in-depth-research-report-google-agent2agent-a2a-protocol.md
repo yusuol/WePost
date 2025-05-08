@@ -1,18 +1,13 @@
 ---
 title: 谷歌 Agent2Agent（A2A）协议深度调研报告
 date: 2025-04-10
-tags:
-  - Agent2Agent
-  - AI
-  - Agent
-  - MCP
-  - Google
+category: Agent2Agent
 ---
 # 谷歌 Agent2Agent（A2A）协议深度调研报告
 
 > ✨文章摘要（AI生成）
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 2025年4月，Google在 Cloud Next 2025 大会上正式发布了全新的 **Agent2Agent (A2A) 协议**。A2A是一个开放的互操作性协议，旨在打破不同AI代理框架和供应商之间的壁垒，实现跨平台的安全高效协作。该协议专为企业环境设计，通过标准化代理之间的通信，解决各类数据孤岛问题，使复杂工作流程的自动化成为可能并提升生产力。
 
@@ -20,7 +15,7 @@ A2A发布时即获得超过50家行业领先企业的支持（如Atlassian、Box
 
 这一合作阵容体现出业界对AI代理互操作性的共同愿景：未来无论底层技术如何，AI智能体都能像网络服务一样自由“对话”和协同工作。
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 ## 技术原理
 

@@ -1,18 +1,13 @@
 ---
 title: In-depth Research Report on Google Agent2Agent (A2A) Protocol
 date: 2025-04-10
-tags:
-  - Agent2Agent
-  - AI
-  - Agent
-  - MCP
-  - Google
+category: Agent2Agent
 ---
 # In-depth Research Report on Google Agent2Agent (A2A) Protocol
 
 > ✨Article Summary (AI Generated)
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 In April 2025, Google officially announced a new **Agent2Agent (A2A) Protocol** at the Cloud Next 2025 event. A2A is an open interoperability protocol designed to break down barriers between different AI agent frameworks and vendors, enabling secure and efficient cross-platform collaboration. Specifically designed for enterprise environments, this protocol addresses data silo issues by standardizing communication between agents, enabling the automation of complex workflows and boosting productivity.
 
@@ -20,7 +15,7 @@ Upon release, A2A received support from over 50 industry-leading enterprises (su
 
 This coalition reflects the industry's shared vision for AI agent interoperability, where in the future, regardless of the underlying technology, AI agents can "converse" and collaborate freely like network services.
 
-<!-- DESC SEP -->
+<!--Yusuol-->
 
 ## Technical Principles
 

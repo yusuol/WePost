@@ -9,7 +9,6 @@ interface Post {
     year: string 
     monthDay: string
   }
-  tags: string[]
   category: string
   excerpt: string | undefined
 }
@@ -25,7 +24,6 @@ export default createContentLoader('en/posts/**/*.md', {
         url,
         excerpt,
         date: formatDate(frontmatter.date),
-        tags: frontmatter.tags || [],
         category: frontmatter.category || 'Uncategorized'  // 添加 category 字段
       }))
       .sort((a, b) => b.date.time - a.date.time)
@@ -33,7 +31,7 @@ export default createContentLoader('en/posts/**/*.md', {
 })
 
 function excerptFn(file: { data: { [key: string]: any }; content: string; excerpt?: string }, options?: any) {
-  file.excerpt = file.content.split('<!-- DESC SEP -->')[1];
+  file.excerpt = file.content.split('<!--Yusuol-->')[1];
 }
 
 function formatDate(raw: string): Post['date'] {

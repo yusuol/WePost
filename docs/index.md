@@ -19,13 +19,6 @@ isNoBackBtn: true
     >
     <div class="post-date hollow-text source-han-serif">{{ post.date.string }}</div>
   </h2>
-  <t-tag
-    v-for="tag in post.tags"
-    class="mr-2"
-    variant="outline"
-    shape="round"
-    >{{ tag }}</t-tag
-  >
   <div v-if="post.excerpt" v-html="post.excerpt"></div>
 </template>
 
@@ -51,7 +44,6 @@ import {
 	MessagePlugin,
 	PaginationProps,
 	Pagination as TPagination,
-  Tag as TTag,
 } from "tdesign-vue-next";
 
 import { data as posts } from "./.vitepress/theme/posts.data.mts";

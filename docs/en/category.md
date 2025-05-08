@@ -56,6 +56,7 @@ const sortedCategoryGroups = computed(() => {
 .post-title {
   margin-bottom: 6px;
   position: relative;
+  border-top: 0px;
 
   .post-year {
     position: absolute;
