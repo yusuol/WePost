@@ -31,7 +31,7 @@ export default defineConfig({
       "link",
       {
         rel: "icon",
-        href: "https://oss.justin3go.com/justin3goAvatar.ico",
+        href: "https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/Yusuol.ico",
       },
     ],
   ],

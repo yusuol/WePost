@@ -12,8 +12,8 @@ export async function createRssFileZH(config: SiteConfig) {
     id: hostname,
     link: hostname,
     language: "zh-Hans",
-    image: "https://oss.justin3go.com/justin3goAvatar.jpg",
-    favicon: `https://oss.justin3go.com/justin3goAvatar.ico`,
+    image: "https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/Yusuol.png",
+    favicon: `https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/Yusuol.ico`,
     copyright: "Copyright© 2025-present Yusuol",
   });
 
@@ -56,8 +56,8 @@ export async function createRssFileEN(config: SiteConfig) {
     id: hostname,
     link: hostname,
     language: "en-US",
-    image: "https://oss.justin3go.com/justin3goAvatar.jpg",
-    favicon: `https://oss.justin3go.com/justin3goAvatar.ico`,
+    image: "https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/Yusuol.png",
+    favicon: `https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/Yusuol.ico`,
     copyright: "Copyright© 2025-present Yusuol",
   });
 

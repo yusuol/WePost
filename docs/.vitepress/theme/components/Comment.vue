@@ -1,55 +1,96 @@
 <template>
 	<div class="comments" v-if="!frontmatter.isNoComment">
-		<!-- params generate in https://giscus.app/zh-CN -->
-		<Giscus
-			v-if="showComment"
-			repo="Justin3go/justin3go.com"
-			repo-id="R_kgDOJq6kjw"
-			category="Announcements"
-			category-id="DIC_kwDOJq6kj84CW7-L"
-			mapping="specific"
-			:term="term"
-			strict="1"
-			reactions-enabled="1"
-			emit-metadata="0"
-			input-position="top"
-			:theme="theme"
-			:lang="lang"
-			loading="lazy"
-			crossorigin="anonymous"
-		/>
+	  <span class="comment-toggle" @click="toggleComments">
+		{{ loadComments ? '评论/Comments' : '评论/Comments' }}
+	  </span>
+  
+	  <Giscus
+		v-if="loadComments && showComment"
+		:key="`${term}-${lang}-${isDark}`"
+		repo="Yusuol/WePost"
+		repo-id="R_kgDOOmIAD"
+		category="Announcements"
+		category-id="DIC_kwDOOmIAD84Cp583"
+		mapping="title"
+		:term="term"
+		strict="0"
+		reactions-enabled="1"
+		emit-metadata="0"
+		input-position="bottom"
+		:theme="isDark ? 'dark' : 'light'"
+		:lang="lang"
+		loading="lazy"
+		crossorigin="anonymous"
+	  />
 	</div>
-</template>
-<script lang="ts" setup>
-import { ref, watch, nextTick, computed } from "vue";
-import { useData, useRoute } from "vitepress";
-import Giscus from "@giscus/vue";
-
-const route = useRoute();
-const { isDark, frontmatter } = useData();
-
-// 保证中英文路径显示同一个评论
-const term = computed(() => route.path.startsWith("/en") ? route.path.slice(3) : route.path);
-const theme = computed(() => (isDark.value ? "noborder_dark" : "noborder_light"));
-const lang = computed(() => route.path.startsWith("/en") ? 'en' : 'zh-Hans');
-
-// language 变化不会触发重新加载，这里 v-if 强制刷新
-const showComment = ref(true);
-watch(
-	() => route.path,
+  </template>
+  
+  
+  <script lang="ts" setup>
+  import { ref, watch, nextTick, computed } from "vue";
+  import { useData, useRoute } from "vitepress";
+  import Giscus from "@giscus/vue";
+  
+  const route = useRoute();
+  const { isDark, frontmatter } = useData();
+  
+  const term = computed(() =>
+	route.path.startsWith("/en") ? route.path.slice(3) : route.path
+  );
+  const lang = computed(() =>
+	route.path.startsWith("/en") ? "en" : "zh-Hans"
+  );
+  
+  const loadComments = ref(false);
+  const showComment = ref(true);
+  
+  // 切换按钮显示/隐藏评论
+  const toggleComments = () => {
+	if (loadComments.value) {
+	  // 正在显示 -> 隐藏
+	  showComment.value = false;
+	  loadComments.value = false;
+	} else {
+	  // 隐藏 -> 显示
+	  loadComments.value = true;
+	  nextTick(() => {
+		showComment.value = true;
+	  });
+	}
+  };
+  
+  // 监听路径/语言/主题变化，重新加载 Giscus
+  watch(
+	() => [route.path, lang.value, isDark.value],
 	() => {
+	  if (loadComments.value) {
 		showComment.value = false;
 		nextTick(() => {
-			showComment.value = true;
+		  showComment.value = true;
 		});
+	  }
 	},
-	{
-		immediate: true,
+	{ immediate: true }
+  );
+  </script>
+  
+  <style scoped lang="scss">
+  .comments {
+	margin-top: 0px;
+  }
+  
+  .comment-toggle {
+	display: inline-block;
+	margin-bottom: 0px;
+	color: #41b349;
+	cursor: pointer;
+	font-size: 14px;
+	text-decoration: none;
+	user-select: none;
+  
+	&:hover {
+	  opacity: 0.8;
 	}
-);
-</script>
-<style lang="scss" scoped>
-.comments {
-	margin-top: 80px;
-}
-</style>
+  }
+  </style>
+  

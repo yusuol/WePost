@@ -34,14 +34,10 @@ import { useRoute } from "vitepress";
 const route = useRoute();
 const isEN = computed(() => route.path.startsWith("/en"));
 
-const weiXinPayUrl = "https://oss.justin3go.com/blogs/justin3go_weixin_pay.jpg";
+const weiXinPayUrl = "https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/ali.jpg";
 const zhiFuBaoPayUrl =
-	"https://oss.justin3go.com/blogs/justin3go_zhifubao_pay.jpg";
-const koFiUrl = "https://ko-fi.com/V7V6YU3UT";
+	"https://techdaily.oss-cn-shanghai.aliyuncs.com/Yusuol/wechat.jpg";
 
-const handleClickKoFi = () => {
-	window.open(koFiUrl, "_blank");
-};
 </script>
 <style lang="scss" scoped>
 .card-container {
