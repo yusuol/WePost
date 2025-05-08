@@ -5,6 +5,7 @@ import { createContentLoader, type SiteConfig } from "vitepress";
 
 const hostname = "https://yusuol.com";
 
+// 生成中文 RSS 文件
 export async function createRssFileZH(config: SiteConfig) {
   const feed = new Feed({
     title: 'Yusuol',
@@ -22,6 +23,7 @@ export async function createRssFileZH(config: SiteConfig) {
     render: true,
   }).load();
 
+  // 按日期降序排序
   posts.sort((a, b) => Number(+new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)));
 
   for (const { url, excerpt, html, frontmatter } of posts) {
@@ -29,6 +31,10 @@ export async function createRssFileZH(config: SiteConfig) {
     if (feed.items.length >= 5) {
       break;
     }
+
+    // ✅ 确保 date 是 Date 类型，避免 toUTCString 报错
+    const date = new Date(frontmatter.date);
+    if (isNaN(date.getTime())) continue; // 可选：跳过无效日期
 
     feed.addItem({
       title: frontmatter.title,
@@ -42,17 +48,20 @@ export async function createRssFileZH(config: SiteConfig) {
           link: "https://Yusuol.com",
         },
       ],
-      date: frontmatter.date,
+      date, // ✅ 使用 Date 类型
     });
   }
 
+  // 输出 RSS 文件
   writeFileSync(path.join(config.outDir, "feed.xml"), feed.rss2(), "utf-8");
 }
 
+// 生成英文 RSS 文件
 export async function createRssFileEN(config: SiteConfig) {
   const feed = new Feed({
     title: "Yusuol",
-    description: "A T-shaped front-end developer who is committed to deepening expertise in the technical field, focuses on independent development, enjoys working with Vue.js and Nest.js, and has some knowledge of Python, search engines, NLP, Web3, and back-end development.",
+    description:
+      "Does technology make life better ?",
     id: hostname,
     link: hostname,
     language: "en-US",
@@ -69,10 +78,13 @@ export async function createRssFileEN(config: SiteConfig) {
   posts.sort((a, b) => Number(+new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)));
 
   for (const { url, excerpt, html, frontmatter } of posts) {
-    // 仅保留最近 5 篇文章
     if (feed.items.length >= 5) {
       break;
     }
+
+    // ✅ 强制转换为 Date 类型，避免 toUTCString 错误
+    const date = new Date(frontmatter.date);
+    if (isNaN(date.getTime())) continue;
 
     feed.addItem({
       title: frontmatter.title,
@@ -86,7 +98,7 @@ export async function createRssFileEN(config: SiteConfig) {
           link: "https://Yusuol.com",
         },
       ],
-      date: frontmatter.date,
+      date,
     });
   }
 
