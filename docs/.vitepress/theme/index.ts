@@ -9,6 +9,7 @@ import Comment from "./components/Comment.vue";
 import ImageViewer from "./components/ImageViewer.vue"
 
 export default {
+ sidebar: false,
 	...Theme,
 	Layout: () => {
 		return h(Theme.Layout, null, {
