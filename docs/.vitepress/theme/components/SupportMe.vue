@@ -1,6 +1,6 @@
 <template>
 	<t-card :style="{ maxWidth: '520px', margin: 'auto', marginTop: '20px', paddingBottom: '10px' }">
-		<h3 align="center" style="border: 0; margin: 10px 0 0;">Support Me</h3>
+		<h3 align="center" style="border: 0; margin: 10px 0 0;">Cyber Begging</h3>
 		<div class="card-container">
 			<t-card theme="poster2" :class="'payment-card'">
 				<template #cover>
@@ -24,22 +24,8 @@
 					<div align="center">{{ isEN ? "Alipay" : "支付宝支付" }}</div>
 				</template>
 			</t-card>
-		</div>
-		<t-button theme="primary" block @click="handleClickKoFi">{{
-			isEN ? "Buy Me a Coffee" : "给我买一杯咖啡"
-		}}</t-button>
-		<t-button
-			href="mailto:just@justin3go.com"
-			theme="primary"
-			class="mt-10 no-underline"
-			style="text-decoration: none;"
-			block
-			variant="outline"
-			>{{ isEN ? "Any Positive Feedback" : "任何正向的反馈" }}</t-button
-		>
-	</t-card>
-	<div class="support-me hollow-text source-han-serif">Support Me</div>
-	<div class="my-name hollow-text source-han-serif">I'm Justin3go</div>
+			</div>
+		</t-card>
 </template>
 <script setup lang="ts">
 import { computed } from "vue";
@@ -88,33 +74,6 @@ const handleClickKoFi = () => {
 	object-fit: contain;
 }
 
-.support-me {
-	position: fixed;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	top: 100px;
-	width: 680px;
-
-	z-index: -1;
-	opacity: 0.12;
-	font-size: 120px;
-	font-weight: 900;
-}
-
-.my-name {
-	position: fixed;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	bottom: 30px;
-	width: 770px;
-
-	z-index: -1;
-	opacity: 0.12;
-	font-size: 120px;
-	font-weight: 900;
-}
 
 .mt-10 {
 	margin-top: 10px;

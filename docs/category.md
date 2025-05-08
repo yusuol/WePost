@@ -64,8 +64,8 @@ const sortedCategoryGroups = computed(() => {
     left: -10px;
     z-index: -1;
     opacity: .16;
-    font-size: 75px;
-    font-weight: 800;
+    font-size: 55px;
+    font-weight: 700;
   }
 }
 

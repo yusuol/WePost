@@ -16,7 +16,7 @@ isNoBackBtn: true
       :aria-label="`Permalink to &quot;${year}&quot;`"
       >​</a
     >
-    <div class="post-year hollow-text source-han-serif">{{ year }}</div>
+    <div class="post-year hollow-text source-han-serif">{{ parseInt(year).toString() }}</div>
   </h2>
   <div class="post-container" v-for="post in postGroup" :key="post.url">
     <a :href="post.url">{{ post.title }}</a>
@@ -73,8 +73,8 @@ const postGroups = computed(() => {
 
 		z-index: -1;
 		opacity: .16;
-		font-size: 75px;
-		font-weight: 800;
+		font-size: 55px;
+		font-weight: 700;
 	}
 }
 

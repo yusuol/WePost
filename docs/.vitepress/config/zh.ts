@@ -18,12 +18,7 @@ export default defineConfig({
    { text: "赞赏", link: "/support-me", activeMatch: '/support-me/' },
     ],
     footer: {
-      message: 'Copyright © 2022-present <a href="https://justin3go.com/about">Justin3go</a>.' +
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/about#%E7%8E%A9%E5%85%B7-%E4%BD%9C%E5%93%81">个人项目</a>' + 
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/about#%E8%81%94%E7%B3%BB%E6%88%91">联系方式</a>' + 
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/friends">友情链接</a>',
-      
-      // copyright: 'Copyright © 2022-present <a href="https://justin3go.com/about">Justin3go</a>.',
+      message: '<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a> © 2025 <a href="https://yusuol.com">Yusuol</a>',
     },
     docFooter: {
       prev: '上一篇',

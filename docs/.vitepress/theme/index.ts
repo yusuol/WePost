@@ -7,7 +7,6 @@ import 'tdesign-vue-next/es/style/index.css';
 import "./style.css";
 import Comment from "./components/Comment.vue";
 import ImageViewer from "./components/ImageViewer.vue"
-import GoBack from "./components/GoBack.vue";
 
 export default {
 	...Theme,
@@ -16,14 +15,12 @@ export default {
 			// https://vitepress.dev/guide/extending-default-theme#layout-slots
 			"doc-after": () => h(Comment),
 			"doc-top": () => h(ImageViewer),
-			"aside-top": () => h(GoBack),
 		});
 	},
 
 	enhanceApp({ app, router }: any) {
 		app.component("Comment", Comment);
 		app.component("ImageViewer", ImageViewer);
-		app.component("GoBack", GoBack);
 
 		router.onAfterRouteChanged = (to: string) => {
 			// 兼容旧博客的中文路径，重定向到新路径，避免外链失效

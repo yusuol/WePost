@@ -18,12 +18,7 @@ export default defineConfig({
 			{ text: "Sponsor", link: "/en/support-me", activeMatch: '/en/support-me' },
     ],
     footer: {
-      message: 'Copyright © 2022-present <a href="https://justin3go.com/about">Justin3go</a>.' +
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/en/about#toys-projects">Projects</a>' + 
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/en/about#contact-me">Contact</a>' + 
-      '&nbsp;&nbsp;&nbsp;✧ <a href="https://justin3go.com/friends">Friends</a>',
-      
-      // copyright: 'Copyright © 2022-present <a href="https://justin3go.com/about">Justin3go</a>.',
+      message: '<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a> © 2025 <a href="https://yusuol.com">Yusuol</a>',
     },
 
     sidebar: sideBarConfig,

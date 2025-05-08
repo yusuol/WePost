@@ -8,24 +8,24 @@
 /** 2. 使用 http://font.ssjjss.com/font-subset/ 对字体进行子集化，这里根据我的网站只保留了这些字符：1234567890/SupportMeI'mJustin3go年 */
 @font-face {
 	font-family: "SourceHanSerifCN";
-	src: local("SourceHanSerifCN"), url("/assets/fonts/SourceHanSerifCN-VF.otf");
+	src: local("SourceHanSerifCN"), url("/assets/fonts/GeistVF.ttf");
 }
 /** logo 字体 */
 /** 使用 http://font.ssjjss.com/font-subset/ 对字体(/assets/fonts/Niconne-Regular.ttf)进行子集化，这里根据我的网站只保留了这些字符：Justin3go */
 @font-face {
 	font-family: "Niconne";
-	src: local("Niconne"), url("/assets/fonts/Niconne-Regular-Subset.ttf");
+	src: local("Niconne"), url("/assets/fonts/Niconne-Regular.ttf");
 }
 
 /* 参考 https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
 
-/**
- * Colors Base
- *
- * These are the pure base color presets. Most of the time, you should not be
- * using these colors directly in the theme but rather use "Colors Theme"
- * instead because those are "Theme (light or dark)" dependant.
- * -------------------------------------------------------------------------- */
+
+
+
+
+ .VPBackToTop {
+ 	display: none !important;
+ }
 
 :root {
 	--vp-c-green-1: #41b349;
@@ -95,14 +95,6 @@
 	font-size: 24px !important;
 }
 
-/* 侧边栏标题隐藏单行文本溢出 */
-.VPSidebar .items p {
-	display: inline-block;
-	width: calc(var(--vp-sidebar-width) - 100px);
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
 
 /** 总体类 */
 ::selection {
@@ -152,23 +144,8 @@ main > div > div > pre > code {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.VPNav .content .content-body {
-	backdrop-filter: blur(36px);
-	background-color: linear-gradient(
-		to bottom,
-		rgba(var(--vp-nav-bg-color), 0.98),
-		rgba(var(--vp-nav-bg-color), 0.6)
-	) !important;
-}
-
 .VPLocalNav{
 	 display: none !important;
-}
-
-.VPLocalNav,
-.has-aside .container {
-	backdrop-filter: none;
-	background-color: none !important;
 }
 
 /** i18n 选项不显示下拉图标 */
