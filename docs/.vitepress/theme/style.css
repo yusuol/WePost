@@ -175,8 +175,10 @@ main > div > div > pre > code {
   }
   
   .VPContent .container {
-    max-width: 61.8% !important;
+    min-width: 60% !important;
+    max-width: 66.7% !important;
     margin: 0 auto;
+    width: 61.8%; /* 默认值，在最小和最大之间 */
   }
 }
 
