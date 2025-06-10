@@ -35,8 +35,7 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-
-	}
+}
   
 
 
@@ -46,20 +45,6 @@
 .VPBackToTop,
 .VPLocalNav {
   display: none !important;
-}
-
- 
-
-:root {
-	/* --vp-font-family-base: "SourceHanSerifCN"; */
-	--vp-font-family-mono: "FiraCode";
-}
-
-	/* 字体 family token */
-	/* --td-font-family: SourceHanSerifCN, PingFang SC, Microsoft YaHei,
-		Arial Regular;
-	--td-font-family-medium: SourceHanSerifCN, PingFang SC, Microsoft YaHei,
-		Arial Medium; */
 }
 
 
