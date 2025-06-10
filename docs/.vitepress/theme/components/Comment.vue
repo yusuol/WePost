@@ -82,7 +82,6 @@
   .comment-toggle {
 	display: inline-block;
 	margin-bottom: 0px;
-	color: #41b349;
 	cursor: pointer;
 	font-size: 14px;
 	text-decoration: none;
