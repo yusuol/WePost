@@ -65,19 +65,6 @@
  * Colors Theme
  * -------------------------------------------------------------------------- */
 
-:root {
-	--vp-c-brand-1: var(--vp-c-green-1);
-	--vp-c-brand-2: var(--vp-c-green-2);
-	--vp-c-brand-3: var(--vp-c-green-3);
-	--vp-c-brand-soft: var(--vp-c-green-soft);
-}
-
-.dark {
-	--vp-c-brand-1: var(--vp-c-green-dark-1);
-	--vp-c-brand-2: var(--vp-c-green-dark-2);
-	--vp-c-brand-3: var(--vp-c-green-dark-3);
-	--vp-c-brand-soft: var(--vp-c-green-dark-soft);
-}
 
 /**
  * Typography
@@ -88,12 +75,6 @@
 	--vp-font-family-mono: "FiraCode";
 }
 
-:root {
-	--td-border-level-2-color: var(--vp-c-brand-soft) !important;
-	--td-brand-color: var(--vp-c-brand-1) !important;
-	--td-brand-color-light: var(--vp-c-brand-soft) !important;
-	--td-brand-color-hover: var(--vp-c-brand-1) !important;
-	--td-brand-color-active: var(--vp-c-brand-2) !important;
 	/* 字体 family token */
 	/* --td-font-family: SourceHanSerifCN, PingFang SC, Microsoft YaHei,
 		Arial Regular;
