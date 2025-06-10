@@ -132,3 +132,10 @@ dist
 # vitepress
 docs/.vitepress/dist
 cache
+
+.obsidian
+# Obsidian cache
+.obsidian/cache
+# Obsidian workspace settings
+.obsidian/workspace
+# Obsidian plugins 
