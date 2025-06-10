@@ -40,7 +40,6 @@
   
 
 
-
 .VPSidebar,
 .VPDocAside,
 .aside,
@@ -49,26 +48,7 @@
   display: none !important;
 }
 
-:root {
-	--vp-c-green-1: #41b349;
-	--vp-c-green-2: #41b349;
-	--vp-c-green-3: #41b349;
-	--vp-c-green-soft: rgba(110, 156, 190, 0.14);
-
-	--vp-c-green-dark-1: #41b349;
-	--vp-c-green-dark-2: #41b349;
-	--vp-c-green-dark-3: #41b349;
-	--vp-c-green-dark-soft: rgba(186, 186, 186, 0.14);
-}
-
-/**
- * Colors Theme
- * -------------------------------------------------------------------------- */
-
-
-/**
- * Typography
- * -------------------------------------------------------------------------- */
+ 
 
 :root {
 	/* --vp-font-family-base: "SourceHanSerifCN"; */
