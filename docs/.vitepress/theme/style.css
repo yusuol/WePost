@@ -50,14 +50,14 @@
 }
 
 :root {
-	--vp-c-green-1: #fff;
-	--vp-c-green-2: #fff;
-	--vp-c-green-3: #fff;
+	--vp-c-green-1: #050505;
+	--vp-c-green-2: #050505;
+	--vp-c-green-3: #050505;
 	--vp-c-green-soft: rgba(110, 156, 190, 0.14);
 
-	--vp-c-green-dark-1: #050505;
-	--vp-c-green-dark-2: #050505;
-	--vp-c-green-dark-3: #050505;
+	--vp-c-green-dark-1: #fff;
+	--vp-c-green-dark-2: #fff;
+	--vp-c-green-dark-3: #fff;
 	--vp-c-green-dark-soft: rgba(186, 186, 186, 0.14);
 }
 
