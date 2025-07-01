@@ -7,14 +7,14 @@
 /** 1. 原始完整字体下载链接：https://github.com/adobe-fonts/source-han-serif/releases  */
 /** 2. 使用 http://font.ssjjss.com/font-subset/ 对字体进行子集化，这里根据我的网站只保留了这些字符：1234567890/SupportMeI'mJustin3go年 */
 @font-face {
-	font-family: "mvboli";
-	src: url("/assets/fonts/mvboli.ttf");
+	font-family: "FZFS_GBK";
+	src: url("/assets/fonts/FZFS_GBK.ttf");
 }
 /** logo 字体 */
 /** 使用 http://font.ssjjss.com/font-subset/ 对字体(/assets/fonts/Niconne-Regular.ttf)进行子集化，这里根据我的网站只保留了这些字符：Justin3go */
 @font-face {
-	font-family: "mvboli";
-	src: url("/assets/fonts/mvboli.ttf");
+	font-family: "Arvo-Bold";
+	src: url("/assets/fonts/Arvo-Bold.ttf");
 }
 
 /* 参考 https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
@@ -123,7 +123,7 @@ h3 {
 
 :root {
 	/* --vp-font-family-base: "SourceHanSerifCN"; */
-	--vp-font-family-mono: "mvboli";
+	--vp-font-family-mono: "FZFS_GBK";
 }
 
 :root {
@@ -142,7 +142,7 @@ h3 {
 
 /* logo 字体设置 */
 .VPNavBarTitle .title {
-	font-family: "mvboli";
+	font-family: "Arvo-Bold";
 	font-size: 24px !important;
 }
 
