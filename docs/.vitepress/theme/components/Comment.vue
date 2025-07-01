@@ -1,8 +1,9 @@
 <template>
 	<div class="comments" v-if="!frontmatter.isNoComment">
-	  <span class="comment-toggle" @click="toggleComments">
-		{{ loadComments ? '评论/Comments' : '评论/Comments' }}
-	  </span>
+	<span class="comment-toggle" @click="toggleComments" style="color: #41b349;">
+  	{{ loadComments ? '评论/Comments' : '评论/Comments' }}
+	</span>
+
   
 	  <Giscus
 		v-if="loadComments && showComment"
