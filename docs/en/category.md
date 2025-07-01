@@ -60,12 +60,12 @@ const sortedCategoryGroups = computed(() => {
 
   .post-year {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: -10px;
     z-index: -1;
     opacity: .16;
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 600;
   }
 }
 

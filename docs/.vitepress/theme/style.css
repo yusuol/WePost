@@ -45,8 +45,7 @@ h1 {
 h2 {
     font-size: 20px !important;
     font-weight: 500 !important;
-    border-top: none !important;
-    margin: inherit !important;
+	margin: inherit !important;
 }
 h3 {
     font-size: 18px !important;
@@ -97,14 +96,8 @@ h3 {
 }
 
 @media (min-width: 960px) {
-    .VPDoc {
-        padding-top: 10px !important;
-    }
     .VPDoc:not(.has-sidebar) .content {
         max-width: inherit !important;
-    }
-	.content {
-        padding: 0px !important;
     }
 }
 
