@@ -8,13 +8,13 @@
 /** 2. 使用 http://font.ssjjss.com/font-subset/ 对字体进行子集化，这里根据我的网站只保留了这些字符：1234567890/SupportMeI'mJustin3go年 */
 @font-face {
 	font-family: "GeistVF";
-	src:u rl("/assets/fonts/GeistVF.ttf");
+	src: url("/assets/fonts/GeistVF.ttf");
 }
 /** logo 字体 */
 /** 使用 http://font.ssjjss.com/font-subset/ 对字体(/assets/fonts/Niconne-Regular.ttf)进行子集化，这里根据我的网站只保留了这些字符：Justin3go */
 @font-face {
-	font-family: "Niconne";
-	src: local("Niconne"), url("/assets/fonts/Niconne-Regular.ttf");
+	font-family: "GeistVF";
+	src: url("/assets/fonts/GeistVF.ttf");
 }
 
 /* 参考 https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
@@ -100,7 +100,7 @@
 
 /* logo 字体设置 */
 .VPNavBarTitle .title {
-	font-family: "Niconne", "SourceHanSerifCN";
+	font-family: "Niconne", "GeistVF";
 	font-size: 24px !important;
 }
 
