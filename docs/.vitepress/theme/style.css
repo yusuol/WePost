@@ -29,12 +29,28 @@
 	
 	/* 控制导航栏内容的宽度，并使其居中 */
 	.VPNavBar .container {
-		max-width: 50vw; /* 设置最大宽度为视口宽度的58% */
+		max-width: 70vw; /* 设置最大宽度为视口宽度的58% */
 		width: 100%; /* 宽度为100% */
 		margin: 0 auto; /* 居中 */
 		padding-left: 0;
 		padding-right: 0;
 	}
+}
+
+h1 {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    padding-top: 14px;
+}
+h2 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    border-top: none !important;
+    margin: inherit !important;
+}
+h3 {
+    font-size: 18px !important;
+    font-weight: 500 !important;
 }
 
 .VPSidebar,More actions
@@ -74,6 +90,24 @@
 	--vp-c-brand-3: var(--vp-c-green-dark-3);
 	--vp-c-brand-soft: var(--vp-c-green-dark-soft);
 }
+
+
+.VPDoc.has-aside .content-container {
+    max-width: 61.8rem !important;
+}
+
+@media (min-width: 960px) {
+    .VPDoc {
+        padding-top: 10px !important;
+    }
+    .VPDoc:not(.has-sidebar) .content {
+        max-width: inherit !important;
+    }
+	.content {
+        padding: 0px !important;
+    }
+}
+
 
 /**
  * Typography
