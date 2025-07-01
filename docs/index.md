@@ -129,7 +129,7 @@ const onCurrentChange: PaginationProps["onCurrentChange"] = (
 
 	@media (max-width: 425px) {
 		.post-date {
-			font-size: 60px !important;
+			font-size: 40px !important;
 		}
 	}
 	
