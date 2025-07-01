@@ -93,7 +93,7 @@ const onCurrentChange: PaginationProps["onCurrentChange"] = (
 <style lang="scss" scoped>
 /* 去掉.vp-doc li + li 的 margin-top */
 .pagination-container {
-	margin-top: 60px;
+	margin-top: 10px;
 
 	:deep(li) {
 		margin-top: 0px;
