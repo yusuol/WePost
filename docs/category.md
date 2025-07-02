@@ -57,6 +57,7 @@ const sortedCategoryGroups = computed(() => {
   margin-bottom: 6px;
   border-top: 0px;
   position: relative;
+  font-family: "Xiaolai-Regular";
 
   .post-year {
     position: absolute;
